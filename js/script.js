@@ -37,7 +37,7 @@ function addTodo() {
     if (todoInput.value.length > 0) {
 
         const todoDiv = document.createElement('div')
-        todoDiv.classList.add('todo')
+        todoDiv.classList.add('todo', '_preloaded')
 
         const newTodo = document.createElement('li');
         newTodo.innerText = todoInput.value
@@ -64,7 +64,8 @@ function addTodo() {
         todoList.appendChild(todoDiv)
 
         todoInput.value = ""
-
+        setTimeout(() => {todoDiv.classList.add('_loaded')}, 100)
+        
         filterTodo()
         clearInput()
     }  
@@ -76,6 +77,7 @@ function deleteCheck(e) {
     const targetElement = e.target
 
     const todo = targetElement.parentElement
+    todo.classList.remove('_preloaded', '_loaded')
     todo.classList.add('_deleted')
     removeLocalTodos(todo)
 
@@ -92,6 +94,14 @@ function checkMark(e) {
     todo.classList.toggle('_completed')
     addLocalTodos(todo)
     filterTodo()
+}
+
+//Making
+function addedTodo(e) {
+    const targetElement = e.target
+
+    const todo = targetElement.parentElement
+    todo.classList.add('_added')
 }
 
 
@@ -123,7 +133,7 @@ function getTodos() {
 
     todos.forEach(function(todo) {
         const todoDiv = document.createElement('div')
-        todoDiv.classList.add('todo')
+        todoDiv.classList.add('todo', '_preloaded')
     
         const newTodo = document.createElement('li');
         newTodo.innerText = todo.todo
@@ -146,6 +156,8 @@ function getTodos() {
         todoDiv.appendChild(deleteButton)
     
         todoList.appendChild(todoDiv)
+
+        setTimeout(() => {todoDiv.classList.add('_loaded')}, 100)
     }) 
 }
 

@@ -240,9 +240,19 @@ form button {
 }
 
 ._deleted {
-  -webkit-transform: rotateZ(20deg) scale(0);
-          transform: rotateZ(20deg) scale(0);
+  -webkit-transform: rotateZ(20deg) scale(0) translateY(50px);
+          transform: rotateZ(20deg) scale(0) translateY(50px);
   opacity: 0;
+}
+
+._preloaded {
+  -webkit-transform: rotateZ(-20deg) scale(0);
+          transform: rotateZ(-20deg) scale(0);
+}
+
+._loaded {
+  -webkit-transform: rotateZ(0) scale(1);
+          transform: rotateZ(0) scale(1);
 }
 
 select {
