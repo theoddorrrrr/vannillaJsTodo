@@ -172,7 +172,7 @@ form button {
 }
 
 ._deleted {
-    transform: translateY(8rem) rotateZ(20deg);
+    transform: rotateZ(20deg) scale(0);
     opacity: 0;
 }
 

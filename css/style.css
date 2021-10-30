@@ -240,8 +240,8 @@ form button {
 }
 
 ._deleted {
-  -webkit-transform: translateY(8rem) rotateZ(20deg);
-          transform: translateY(8rem) rotateZ(20deg);
+  -webkit-transform: rotateZ(20deg) scale(0);
+          transform: rotateZ(20deg) scale(0);
   opacity: 0;
 }
 
