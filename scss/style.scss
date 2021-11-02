@@ -12,7 +12,6 @@ body {
 
 :focus {
     outline: 0;
-    background: #8E4EEB;
 }
 
 .wrapper {
@@ -88,10 +87,27 @@ form select {
     transition: all 0.3s ease;
 }
 
+button:focus {
+    outline: 1px solid #8E4EEB;
+}
+
 form button {
     color: #8E4EEB;
     cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
     transition: all .3s ease;
+    i {
+        transition: transform 0.3s ease;
+    }
+    &:active {
+        i {
+           
+            transform: scale(1.5);
+        }
+    }
     @media (any-hover: hover) {
         i {
             transition: transform .5s ease;
@@ -108,12 +124,14 @@ form button {
 
 .search {
     display: flex;
+    position: relative;
 }
 
 .todo-input {
     width: clamp(180px, 20vw, 500px);
     color: #8E4EEB;
     &:focus {
+        background-color: #8E4EEB;
         color: white;
         &::placeholder {
             color: white;
@@ -183,24 +201,6 @@ form button {
 
 
 //Select section
-select {
-    appearance: none;
-    color: #8E4EEB;
-    width: 200px;
-    cursor: pointer;
-    padding: 1em;
-    &:focus {
-        background: white;
-    }
-    &:active {
-        background: white;
-    }
-    option {
-        background-color: #8E4EEB;
-        color: white;
-    }
-}
-
 .select {
     margin: 1rem;
     position: relative;
@@ -223,6 +223,21 @@ select {
         }
     }
 }
+
+select {
+    appearance: none;
+    color: #8E4EEB;
+    width: 200px;
+    cursor: pointer;
+    padding: 1em;
+    option {
+        background-color: #8E4EEB;
+        color: white;
+    }
+}
+
+
+
 
 
 
