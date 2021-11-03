@@ -1,0 +1,38 @@
+//To-do list styles
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    color: black;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    background: white
+}
+
+.todo-item {
+    flex: 1;
+    word-break: break-all;
+    background: white;
+    padding: 0.5em;
+}
+
+.delete-btn,
+.complete-btn {
+    background: $purpleColor;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: rgb(14, 143, 14);
+}

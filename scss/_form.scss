@@ -1,0 +1,118 @@
+//Form styles
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input,
+form button {
+    font-size: 1.5rem;
+    padding: 0.5em;
+    background: white;
+}
+
+form input,
+form select {
+    transition: all 0.3s ease;
+}
+
+form button {
+    color: $purpleColor;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:active {
+        i {
+            transform: scale(1.5);
+        }
+    }
+    &:focus-visible {
+        i {
+            transform: scale(1.5) rotate(360deg)
+        }
+    }
+    @media (any-hover: hover) {
+        i {
+            transition: transform .5s ease;
+        }
+        &:hover {
+            background: $purpleColor;
+            color: #eee;
+            i {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+form .search {
+    display: flex;
+}
+
+form .todo-input {
+    width: clamp(180px, 20vw, 500px);
+    color: $purpleColor;
+    transition: all 0.3s ease;
+    &:focus {
+        background-color: $purpleColor;
+        color: white;
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+    &::placeholder {
+        color: $purpleColor;
+        opacity: 0.7;
+        text-align: center;
+        padding-left: 2em;
+        transition: all 0.3s ease;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            &::placeholder {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+//Select section
+.select {
+    margin: 1rem;
+    position: relative;
+    &::after {
+        content: "\25BC";
+        position: absolute;
+        font-size: 20px;
+        background: $purpleColor;
+        color: white;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    @media (any-hover: hover) {
+        &:hover::after {
+            background: white;
+            color: $purpleColor;
+        }
+    }
+}
+
+select {
+    appearance: none;
+    color: $purpleColor;
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+    padding: 1em;
+    &:focus-within {
+        border-radius: 30px 0px 0px 0px;
+    }
+    option {
+        background-color: $purpleColor;
+        color: white;
+    }
+}

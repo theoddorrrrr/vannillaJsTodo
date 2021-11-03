@@ -1,0 +1,38 @@
+//Main styles
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(to bottom right, $redColor, $purpleColor);
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    max-width: 700px;
+    border: 1px solid white;
+    border-radius: 10px;
+    gap: 1em;
+    padding: clamp(1px, 7vw, 5em);
+    padding-bottom: 1em;
+    margin: 0 15px;
+    background: linear-gradient(to bottom right, $purpleColor, $redColor);
+}
+
+h1 {
+    font-size: clamp(2em, 5vw, 4em);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+//To make invisible for PreventDefault 
+//and not to refresh on clicking on i
+i {
+    pointer-events: none;
+    transition: transform 0.5s ease
+}

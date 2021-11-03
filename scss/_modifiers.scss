@@ -1,0 +1,16 @@
+
+//Modifiers
+._completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+._deleted {
+    transform: rotateZ(20deg) scale(0) translateY(50px);
+    opacity: 0;
+}
+._preloaded {
+    transform: rotateZ(-20deg) scale(0);
+}
+._loaded {
+    transform: rotateZ(0) scale(1);
+}

@@ -15,10 +15,6 @@ body {
           align-items: center;
 }
 
-:focus {
-  outline: 0;
-}
-
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,11 +103,6 @@ form select {
   transition: all 0.3s ease;
 }
 
-button:focus-visible i {
-  -webkit-transform: scale(1.5) rotate(360deg);
-          transform: scale(1.5) rotate(360deg);
-}
-
 form button {
   color: #8E4EEB;
   cursor: pointer;
@@ -122,6 +113,11 @@ form button {
 form button:active i {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+form button:focus-visible i {
+  -webkit-transform: scale(1.5) rotate(360deg);
+          transform: scale(1.5) rotate(360deg);
 }
 
 @media (any-hover: hover) {
@@ -141,42 +137,41 @@ form button:active i {
   }
 }
 
-.search {
+form .search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 
-.todo-input {
+form .todo-input {
   width: clamp(180px, 20vw, 500px);
   color: #8E4EEB;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.todo-input:focus {
+form .todo-input:focus {
   background-color: #8E4EEB;
   color: white;
 }
 
-.todo-input:focus::-webkit-input-placeholder {
+form .todo-input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.todo-input:focus:-ms-input-placeholder {
+form .todo-input:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
-.todo-input:focus::-ms-input-placeholder {
+form .todo-input:focus::-ms-input-placeholder {
   opacity: 0;
 }
 
-.todo-input:focus::placeholder {
+form .todo-input:focus::placeholder {
   opacity: 0;
 }
 
-.todo-input::-webkit-input-placeholder {
+form .todo-input::-webkit-input-placeholder {
   color: #8E4EEB;
   opacity: 0.7;
   text-align: center;
@@ -185,7 +180,7 @@ form button:active i {
   transition: all 0.3s ease;
 }
 
-.todo-input:-ms-input-placeholder {
+form .todo-input:-ms-input-placeholder {
   color: #8E4EEB;
   opacity: 0.7;
   text-align: center;
@@ -194,7 +189,7 @@ form button:active i {
   transition: all 0.3s ease;
 }
 
-.todo-input::-ms-input-placeholder {
+form .todo-input::-ms-input-placeholder {
   color: #8E4EEB;
   opacity: 0.7;
   text-align: center;
@@ -203,7 +198,7 @@ form button:active i {
   transition: all 0.3s ease;
 }
 
-.todo-input::placeholder {
+form .todo-input::placeholder {
   color: #8E4EEB;
   opacity: 0.7;
   text-align: center;
@@ -213,18 +208,65 @@ form button:active i {
 }
 
 @media (any-hover: hover) {
-  .todo-input:hover::-webkit-input-placeholder {
+  form .todo-input:hover::-webkit-input-placeholder {
     opacity: 0.5;
   }
-  .todo-input:hover:-ms-input-placeholder {
+  form .todo-input:hover:-ms-input-placeholder {
     opacity: 0.5;
   }
-  .todo-input:hover::-ms-input-placeholder {
+  form .todo-input:hover::-ms-input-placeholder {
     opacity: 0.5;
   }
-  .todo-input:hover::placeholder {
+  form .todo-input:hover::placeholder {
     opacity: 0.5;
   }
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  font-size: 20px;
+  background: #8E4EEB;
+  color: white;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .select:hover::after {
+    background: white;
+    color: #8E4EEB;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #8E4EEB;
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+  padding: 1em;
+}
+
+select:focus-within {
+  border-radius: 30px 0px 0px 0px;
+}
+
+select option {
+  background-color: #8E4EEB;
+  color: white;
 }
 
 .todo-list {
@@ -296,51 +338,4 @@ form button:active i {
 ._loaded {
   -webkit-transform: rotateZ(0) scale(1);
           transform: rotateZ(0) scale(1);
-}
-
-.select {
-  margin: 1rem;
-  position: relative;
-}
-
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  font-size: 20px;
-  background: #8E4EEB;
-  color: white;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1rem;
-  pointer-events: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-@media (any-hover: hover) {
-  .select:hover::after {
-    background: white;
-    color: #8E4EEB;
-  }
-}
-
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  color: #8E4EEB;
-  width: 200px;
-  cursor: pointer;
-  text-align: center;
-  padding: 1em;
-}
-
-select:focus-within {
-  border-radius: 30px 0px 0px 0px;
-}
-
-select option {
-  background-color: #8E4EEB;
-  color: white;
 }

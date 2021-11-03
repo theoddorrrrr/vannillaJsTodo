@@ -1,0 +1,19 @@
+//Scrollbar
+::-webkit-scrollbar {
+    border-radius: 5px;
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: $redColor;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: $purpleColor;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $purpleColor;
+}
