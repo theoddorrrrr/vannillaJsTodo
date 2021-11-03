@@ -5,8 +5,8 @@ const filter = document.querySelector('.filter-todo')
 document.addEventListener('click', documentActions)
 document.addEventListener('DOMContentLoaded', getTodos)
 document.addEventListener('DOMContentLoaded', getInput)
-todoInput.oninput = saveInput
-filter.onchange = filterTodo()
+todoInput.addEventListener('input', saveInput)
+filter.addEventListener('change', function() {filterTodo()})
 
 function documentActions(e) {
     const targetElement = e.target
@@ -22,9 +22,6 @@ function documentActions(e) {
     if (targetElement.classList.contains('complete-btn')) {
         e.preventDefault()
         checkMark(e)
-    }
-    if (targetElement.classList.contains('filter-todo')) {
-        filterTodo()
     }
 }
 
