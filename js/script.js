@@ -93,7 +93,10 @@ function checkMark(e) {
     const todo = targetElement.parentElement
     todo.classList.toggle('_completed')
     addLocalTodos(todo)
-    filterTodo()
+    todo.addEventListener('transitionend', () => {
+        filterTodo()
+    })
+    
 }
 
 //Making
