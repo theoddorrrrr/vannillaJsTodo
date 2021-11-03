@@ -6,6 +6,7 @@ document.addEventListener('click', documentActions)
 document.addEventListener('DOMContentLoaded', getTodos)
 document.addEventListener('DOMContentLoaded', getInput)
 todoInput.oninput = saveInput
+filter.onchange = filterTodo()
 
 function documentActions(e) {
     const targetElement = e.target
