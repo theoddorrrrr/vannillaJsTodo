@@ -6,14 +6,14 @@
   
 ::-webkit-scrollbar-track {
     border-radius: 5px;
-    background: $redColor;
+    background: $greenColor;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: $purpleColor;
+    background: $blueColor;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: $purpleColor;
+    background: $blueColor;
 }

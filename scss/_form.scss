@@ -19,7 +19,7 @@ form select {
 }
 
 form button {
-    color: $purpleColor;
+    color: $blueColor;
     cursor: pointer;
     transition: all .3s ease;
     &:active {
@@ -37,7 +37,7 @@ form button {
             transition: transform .5s ease;
         }
         &:hover {
-            background: $purpleColor;
+            background: $blueColor;
             color: #eee;
             i {
                 transform: rotate(90deg);
@@ -52,17 +52,17 @@ form .search {
 
 form .todo-input {
     width: clamp(180px, 20vw, 500px);
-    color: $purpleColor;
+    color: $blueColor;
     transition: all 0.3s ease;
     &:focus {
-        background-color: $purpleColor;
+        background-color: $blueColor;
         color: white;
         &::placeholder {
             opacity: 0;
         }
     }
     &::placeholder {
-        color: $purpleColor;
+        color: $blueColor;
         opacity: 0.7;
         text-align: center;
         padding-left: 2em;
@@ -84,7 +84,7 @@ form .todo-input {
         content: "\25BC";
         position: absolute;
         font-size: 20px;
-        background: $purpleColor;
+        background: $blueColor;
         color: white;
         top: 0;
         right: 0;
@@ -96,14 +96,14 @@ form .todo-input {
     @media (any-hover: hover) {
         &:hover::after {
             background: white;
-            color: $purpleColor;
+            color: $blueColor;
         }
     }
 }
 
 select {
     appearance: none;
-    color: $purpleColor;
+    color: $blueColor;
     width: 200px;
     cursor: pointer;
     text-align: center;
@@ -112,7 +112,7 @@ select {
         border-radius: 30px 0px 0px 0px;
     }
     option {
-        background-color: $purpleColor;
+        background-color: $blueColor;
         color: white;
     }
 }

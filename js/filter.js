@@ -1,4 +1,4 @@
-import { todoList, filter } from "./script.js"
+import { todoList, filter } from "./app.js"
 
 //Filter
 function filterTodo() {

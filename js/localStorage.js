@@ -1,4 +1,4 @@
-import { todoList } from "./script.js"
+import { todoList } from "./app.js"
 
 //Local Storage for todos
 function checkTodos() {
@@ -44,6 +44,11 @@ function getTodos() {
         if (todo.checked === true) {
             todoDiv.classList.toggle('_completed')
         }
+
+        const editButton = document.createElement('button')
+        editButton.innerHTML = `<i class="fas fa-edit"></i>`
+        editButton.classList.add('edit-btn')
+        todoDiv.appendChild(editButton)
     
         const deleteButton = document.createElement('button')
         deleteButton.innerHTML = `<i class="fas fa-trash"></i>`
@@ -60,6 +65,7 @@ function addLocalTodos(todo) {
     let todos = checkTodos()
 
     const todoIndex = todo.children[0].innerText
+
     let indexTodo = todos.find(item => {
         return item.todo === todoIndex
     } )
@@ -85,4 +91,4 @@ function removeLocalTodos(todo) {
     localStorage.setItem("todos", JSON.stringify(todos))
 }
 
-export {saveLocalTodos, getTodos, addLocalTodos, removeLocalTodos}
+export {checkTodos, saveLocalTodos, getTodos, addLocalTodos, removeLocalTodos}

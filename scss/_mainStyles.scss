@@ -1,7 +1,7 @@
 //Main styles
 body {
-    font-family: 'Josefin Sans', sans-serif;
-    background: linear-gradient(to bottom right, $redColor, $purpleColor);
+    font-family: $font;
+    background: linear-gradient(to bottom right, $greenColor, $blueColor);
     color: #eee;
     display: flex;
     justify-content: center;
@@ -16,12 +16,12 @@ body {
     position: relative;
     max-width: 700px;
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius: 0px 20px 0px 20px;
     gap: 1em;
     padding: clamp(1px, 7vw, 5em);
     padding-bottom: 1em;
     margin: 0 15px;
-    background: linear-gradient(to bottom right, $purpleColor, $redColor);
+    background: #4d55ae;
 }
 
 h1 {

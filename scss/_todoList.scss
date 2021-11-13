@@ -26,13 +26,21 @@
 }
 
 .delete-btn,
-.complete-btn {
-    background: $purpleColor;
+.complete-btn,
+.edit-btn {
     color: white;
     padding: 1rem;
     font-size: 1rem;
 }
 
 .complete-btn {
-    background: rgb(14, 143, 14);
+    background: #676b91;
+}
+
+.edit-btn {
+    background: #39429b;
+}
+
+.delete-btn {
+    background: #242a6b;
 }

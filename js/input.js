@@ -1,4 +1,4 @@
-import { todoInput } from "./script.js";
+import { todoInput } from "./app.js";
 
 //Input
 function saveInput() {
@@ -8,6 +8,7 @@ function saveInput() {
 }
 
 function clearInput() {
+    todoInput.value = ""
     localStorage.setItem('input', '')
 }
 
